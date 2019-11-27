@@ -112,7 +112,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8813673060045091343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2094765787232974415}
+        m_MethodName: OnRemoveButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8813673060596864202
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8813673060596864197}
+  - component: {fileID: 2094765787232974415}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -150,6 +162,20 @@ RectTransform:
   m_AnchoredPosition: {x: -67.149994, y: 92.49999}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2094765787232974415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8813673060596864202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c7ec7e339e6af4bb5fbea05cae730d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 8813673061354474442}
+  removeButton: {fileID: 8813673060045091340}
 --- !u!1 &8813673060887874504
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +289,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8813673060887874501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2094765787232974415}
+        m_MethodName: UseItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8813673061354474440
 GameObject:
   m_ObjectHideFlags: 0
