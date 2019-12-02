@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94302e93f3d3dac4593eeccf4d5e0ceb, type: 3}
-  m_Name: Helmet of Protection
+  m_Name: Helmet
   m_EditorClassIdentifier: 
-  name: Helmet of Protection
-  icon: {fileID: 21300000, guid: 60bf139efd92d3743b8da612e7dbe50d, type: 3}
+  name: Helmet
+  icon: {fileID: 21300000, guid: 7a20fc1c352562d419f11803ac4a97c6, type: 3}
   isDefaultItem: 0
   equipSlot: 0
-  armorModifier: 3
-  damageModifier: 0
+  mesh: {fileID: 8118389113375939122, guid: 33ab6fddec6aac7418a6744cf1daba41, type: 3}
+  armorModifier: 2
+  damageModifier: 1

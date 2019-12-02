@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94302e93f3d3dac4593eeccf4d5e0ceb, type: 3}
-  m_Name: Sword of Destiny
+  m_Name: Platebody
   m_EditorClassIdentifier: 
-  name: Sword of Destiny
-  icon: {fileID: 21300000, guid: d82d94e73dca8d446b62c1778eed7843, type: 3}
+  name: Platebody
+  icon: {fileID: 21300000, guid: 867b44f7f3849d44ca8a2996cd1750ad, type: 3}
   isDefaultItem: 0
-  equipSlot: 3
+  equipSlot: 1
+  mesh: {fileID: 6002837746196689660, guid: ae965dff778ff0745897debf7d99e7c5, type: 3}
   armorModifier: 0
   damageModifier: 3

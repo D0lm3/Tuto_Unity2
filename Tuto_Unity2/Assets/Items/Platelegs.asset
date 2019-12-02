@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94302e93f3d3dac4593eeccf4d5e0ceb, type: 3}
-  m_Name: Helmet of Fire
+  m_Name: Platelegs
   m_EditorClassIdentifier: 
-  name: Helmet of Fire
-  icon: {fileID: 21300000, guid: d82d94e73dca8d446b62c1778eed7843, type: 3}
+  name: Platelegs
+  icon: {fileID: 21300000, guid: 91142730ab9548b4281a77eba4922a97, type: 3}
   isDefaultItem: 0
-  equipSlot: 0
-  armorModifier: 2
-  damageModifier: 1
+  equipSlot: 2
+  mesh: {fileID: 5689042805857515704, guid: 17a3a552f0732154ea70b73326077103, type: 3}
+  armorModifier: 3
+  damageModifier: 0
