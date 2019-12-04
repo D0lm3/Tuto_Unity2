@@ -3663,6 +3663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b04abdbf582d24b825fe6ce15d55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultItems:
+  - {fileID: 11400000, guid: 0f5181d1a632da043a47e195288d237b, type: 2}
+  - {fileID: 11400000, guid: 81ddfaf25e970bf49bf1763271fb8d70, type: 2}
+  - {fileID: 11400000, guid: ab71d1ee9ed156545b5cfe7e83deade1, type: 2}
+  - {fileID: 11400000, guid: bc8e2b558f7d6574ba7963774ae60978, type: 2}
   targetMesh: {fileID: 1673949988}
 --- !u!4 &938596094 stripped
 Transform:

@@ -10,6 +10,7 @@ public class EquipmentManager : MonoBehaviour
         instance = this;
     }
     #endregion 
+   public Equipment[] defaultItems;
     public SkinnedMeshRenderer targetMesh;
     Equipment[] currentEquipment; //items we have currently equiped
     SkinnedMeshRenderer[] currentMeshes;
@@ -24,11 +25,14 @@ public class EquipmentManager : MonoBehaviour
        currentEquipment = new Equipment[numSlots];
 
        currentMeshes = new SkinnedMeshRenderer[numSlots];
+
+       EquipDefaultItems();
     }
 
     public void Equip(Equipment newItem){ //equip a new item
         int slotIndex = (int)newItem.equipSlot; //find out whiech equipment slot our item fit in
-        Equipment oldItem = null;
+        
+        Equipment oldItem = Unequip(slotIndex);
         
         if(currentEquipment[slotIndex] != null){
             oldItem = currentEquipment[slotIndex];
@@ -37,7 +41,7 @@ public class EquipmentManager : MonoBehaviour
         if (onEquipmentChanged != null){
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
-
+        SetEquimpentBlendShapes(newItem, 100);
         currentEquipment[slotIndex] = newItem;
 
         SkinnedMeshRenderer newMesh = Instantiate<SkinnedMeshRenderer>(newItem.mesh);
@@ -47,13 +51,14 @@ public class EquipmentManager : MonoBehaviour
         newMesh.rootBone = targetMesh.rootBone;
         currentMeshes[slotIndex] = newMesh;
     }
-    public void Unequip(int slotIndex){
+    public Equipment Unequip(int slotIndex){
          
          if(currentEquipment[slotIndex] != null){
              if(currentMeshes[slotIndex] != null){
                  Destroy(currentMeshes[slotIndex].gameObject);
              }
             Equipment oldItem = currentEquipment[slotIndex];
+            SetEquimpentBlendShapes(oldItem, 0);
             inventory.Add(oldItem);
 
             currentEquipment[slotIndex] = null;
@@ -61,12 +66,27 @@ public class EquipmentManager : MonoBehaviour
             if (onEquipmentChanged != null){
             onEquipmentChanged.Invoke(null, oldItem);
         }
+        return oldItem;
         }
+        return null;
     }
     public void UnequipAll(){
         
         for(int i = 0; i < currentEquipment.Length; i++){
             Unequip(i);
+        }
+        EquipDefaultItems();
+    }
+
+    void SetEquimpentBlendShapes(Equipment item, int weight){
+        foreach(EquipmentMeshRegion blendShape in item.coveredMeshRegions){
+            targetMesh.SetBlendShapeWeight((int)blendShape, weight);
+        }
+    }
+
+    void EquipDefaultItems(){
+        foreach(Equipment item in defaultItems){
+            Equip(item);
         }
     }
     public void Update(){
