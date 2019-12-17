@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
     public virtual void Interact(){
         //this method is meant to be overwritten
         //each type of interactable objects (items, ennemies) we'll have an interat method
-        Debug.Log("Interacting with " + transform.name);
+       // Debug.Log("Interacting with " + transform.name);
     }
 
     void Update(){
